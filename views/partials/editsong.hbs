@@ -1,6 +1,6 @@
 <form class="ui stacked segment form" method="POST" action="/playlist/{{playlistId}}/updatesong/{{id}}" >
     <tr>
-    <tr class="hide">
+    <tr class="hide" id="edit">
 
     <td>
       <span class="ui input">
@@ -27,6 +27,12 @@
                     title="Save changes">
                 <i class="ui save icon"></i>
             </button>
+
+            <button type = "reset" class = "editSubmit" id="hideEdit"
+                    title="Exit without saving">
+                <i class="ui undo icon"></i>
+            </button>
+
         </td>
     </tr>
 </form>
