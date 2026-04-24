@@ -3,6 +3,7 @@
     {
       "id": "02",
       "title": "Beethoven Concertos",
+      "rating": 3,
       "songs": [
         {
           "id": "07",
@@ -12,6 +13,7 @@
         {
           "id": "09",
           "title": "Piano Concerto No. 6",
+          "rating": 3,
           "artist": "Beethoven"
         }
       ]
@@ -19,8 +21,10 @@
     {
       "id": "a317f541-115d-488c-a451-ed780fa80e62",
       "title": "gg",
+      "rating": 5,
       "date": "2026-04-24T10:10:30.804Z",
       "songs": []
     }
+
   ]
 }
