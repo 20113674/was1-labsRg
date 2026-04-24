@@ -10,12 +10,9 @@
 
     {{#each playlists}}
         <section class="ui left aligned middle aligned segment">
-            <h3 class="ui header">
-                {{uppercase title}}
-            </h3>
 
             <h3 class="ui header">
-                {{title}}
+                {{uppercase title}}
             </h3>
 
             <p>
@@ -23,25 +20,26 @@
                 {{#if songs}}
                     Total songs:
                     {{songs.length}}
+
                 {{else}}
                     Empty playlist!
                 {{/if}}
 
                 {{#if date}}
-                    <br>
+                    <br />
                     <i class="calendar alternate outline icon"></i>
-                    Created on <i>{{date}}</i>
+                    Created on
+                    <i>{{formatDate date}}</i>
                 {{/if}}
+
             </p>
 
-            <a href="/playlist/{{id}}">
-                <i class="ui open folder outline black icon"></i>
-            </a>
-
+            <a href="/playlist/{{id}}"><i
+                    class="ui open folder outline black icon"
+            ></i></a>
             <a href="/dashboard/deleteplaylist/{{id}}">
                 <i class="ui trash black icon"></i>
             </a>
-
         </section>
     {{/each}}
 
