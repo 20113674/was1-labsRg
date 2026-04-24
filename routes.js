@@ -23,4 +23,6 @@ router.post('/playlist/:id/addsong', playlist.addSong);
 
 router.post('/dashboard/addplaylist', dashboard.addPlaylist);
 
+router.get('/playlist/:id/deletesong/:songid', playlist.deleteSong);
+
 export default router;
