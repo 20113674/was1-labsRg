@@ -1,27 +1,41 @@
-<tr>
-<tr id="song">
-
-<td>
-        {{title}}
-    </td>
-    <td>
-        {{artist}}
-    </td>
-
+<tr id="song{{@index}}">
+    <td>{{title}}</td>
+    <td>{{artist}}</td>
     <td class="center aligned">
-        <button title="Edit song" class = "editSubmit">
+        <button title="Edit song" class="editSubmit" id="showEdit{{@index}}">
             <i class="ui pencil icon"></i>
         </button>
     </td>
     <td class="center aligned">
-        <a href="/playlist/{{playlistId}}/deletesong/{{id}}"
-           title="Delete song">
+        <a href="/playlist/{{playlistId}}/deletesong/{{id}}" title="Delete song">
             <i class="ui black trash icon"></i>
         </a>
-        
-        <button title="Edit song" class = "editSubmit" id="showEdit">
-            <i class="ui pencil icon"></i>
-        </button>
-
     </td>
 </tr>
+
+<form class="ui stacked segment form" method="POST" action="/playlist/{{playlistId}}/updatesong/{{id}}">
+    <tr class="hide" id="edit{{@index}}">
+        <td>
+            <span class="ui input">
+                <input type="text" name="title" autofocus required
+                       placeholder="Title" value="{{title}}">
+            </span>
+        </td>
+        <td>
+            <span class="ui input">
+                <input type="text" name="artist" required
+                       placeholder="Artist" value="{{artist}}">
+            </span>
+        </td>
+        <td class="center aligned">
+            <button type="reset" class="editSubmit" id="hideEdit{{@index}}" title="Exit without saving">
+                <i class="ui undo icon"></i>
+            </button>
+        </td>
+        <td class="center aligned">
+            <button type="submit" class="editSubmit" title="Save changes">
+                <i class="ui save icon"></i>
+            </button>
+        </td>
+    </tr>
+</form>

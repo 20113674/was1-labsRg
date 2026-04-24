@@ -6,14 +6,8 @@
       "rating": 3,
       "songs": [
         {
-          "id": "07",
-          "title": "Piano Concerto No. 1",
-          "artist": "Beethoven"
-        },
-        {
           "id": "09",
           "title": "Piano Concerto No. 6",
-          "rating": 3,
           "artist": "Beethoven"
         }
       ]
