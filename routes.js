@@ -32,3 +32,7 @@ router.post('/playlist/:id/updatesong/:songid', playlist.updateSong);
 router.get('/stats', stats.createView);
 
 export default router;
+
+router.get('/searchCategory', dashboard.createView);
+
+router.get('/sortData', dashboard.createView);
